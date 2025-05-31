@@ -1,4 +1,4 @@
-#define pinLed1  13
+#define pinLed1 13
 
 void setup() 
 { pinMode(pinLed1,OUTPUT);
