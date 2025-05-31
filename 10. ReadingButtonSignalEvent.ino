@@ -50,9 +50,11 @@ void loop()
 { if(getPB()==1)
   { LEDs(1);
     delay(100);
+   
     while(getPB()==1)
     { LEDs(2);
     }
+   
     LEDs(4);
     delay(50);
   }
