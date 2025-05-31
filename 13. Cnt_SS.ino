@@ -69,7 +69,7 @@ void multiplexSegment(uint16_t x)
   }
 }
 void displaySegment(void)
-{  static uint8_t seg=0;
+{ static uint8_t seg=0;
   ST(LOW);
   for(int8_t i=15;i>-1;i--)
   { SH(LOW);
