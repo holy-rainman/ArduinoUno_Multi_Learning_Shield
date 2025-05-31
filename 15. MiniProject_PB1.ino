@@ -124,6 +124,7 @@ void loop()
     while(getPB()==1);
     delay(50);
   }
+ 
   multiplexSegment(cnt);
 }
 
