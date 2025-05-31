@@ -130,7 +130,7 @@ void loop()
     cnt++;
     while(getPB()==2);
     delay(50);
-  }
+  }
  
   multiplexSegment(cnt);
 }
