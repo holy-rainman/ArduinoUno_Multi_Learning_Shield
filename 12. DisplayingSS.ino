@@ -22,12 +22,11 @@
 #define pb3  digitalRead(A3)
 
 uint8_t ledSeq[]={1,3,7,14,12,8,0,8,12,14,7,3,1,0};
-uint8_t ledSeq[]={1,3,7,14,12,8,0,8,12,14,7,3,1,0};
 // Array data & variables used for 7-segment Common Anode - numeric value only
 //                  INDEX:  0    1    2    3    4    5    6    7    8    9   10
 //                    NUM:  0    1    2    3    4    5    6    7    8    9 BLNK
 const uint8_t num[30] = {0xC0,0XF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90,0xFF};
-const uint8_t seg[4]  = {0xF1,0xF2,0xF4,0xF8};
+const uint8_t seg[4]  = {0xF1,0xF2,0xF4,0xF8};
 uint16_t ptr2disp;
 uint16_t buff[4];
 
@@ -63,7 +62,7 @@ void multiplexSegment(uint16_t x)
         ptr2disp = (x % 100) / 10;
         break;
       case 3: // DIGIT 4
-        ptr2disp = y % 10;
+        ptr2disp = x % 10;
         break;
     }
     buff[i] = (num[ptr2disp]<<8) | seg[i];
