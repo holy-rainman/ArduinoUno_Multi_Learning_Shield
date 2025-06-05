@@ -81,7 +81,8 @@ void displaySegment(void)
   if(++seg>3) seg=0;
 }
 
-uint16_t cnt=0, saat=0, tempoh=500;
+uint16_t saat=0, tempoh=500;
+volatile uint16_t cnt=0;
 void setup() 
 { // TIMER 0 for interrupt frequency 1000 Hz:
   cli(); 
