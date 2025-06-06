@@ -1,0 +1,229 @@
+[
+    {
+        "id": "a950d00ccb63ae22",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "89f9d42b7ed15162",
+        "type": "ui_button",
+        "z": "a950d00ccb63ae22",
+        "name": "",
+        "group": "7c4d0ace60ed3e6a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ten",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ten",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 60,
+        "wires": [
+            [
+                "fb0172d74ad647a1"
+            ]
+        ]
+    },
+    {
+        "id": "136c1857fe8c109c",
+        "type": "ui_button",
+        "z": "a950d00ccb63ae22",
+        "name": "",
+        "group": "7c4d0ace60ed3e6a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "one",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "one",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "fb0172d74ad647a1"
+            ]
+        ]
+    },
+    {
+        "id": "fb0172d74ad647a1",
+        "type": "serial out",
+        "z": "a950d00ccb63ae22",
+        "name": "",
+        "serial": "db66e84f3552f96e",
+        "x": 510,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2ae020461f5adf1e",
+        "type": "ui_button",
+        "z": "a950d00ccb63ae22",
+        "name": "",
+        "group": "5293b7e195606dc2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "start",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "start",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "fb0172d74ad647a1"
+            ]
+        ]
+    },
+    {
+        "id": "ce7ccb39d9db40a7",
+        "type": "serial in",
+        "z": "a950d00ccb63ae22",
+        "name": "",
+        "serial": "db66e84f3552f96e",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "a7d05c8dbc738692",
+                "83408280643a204e"
+            ]
+        ]
+    },
+    {
+        "id": "a7d05c8dbc738692",
+        "type": "ui_text",
+        "z": "a950d00ccb63ae22",
+        "group": "3fa0da8da1341217",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Timer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 410,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "83408280643a204e",
+        "type": "ui_gauge",
+        "z": "a950d00ccb63ae22",
+        "name": "",
+        "group": "3fa0da8da1341217",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7c4d0ace60ed3e6a",
+        "type": "ui_group",
+        "name": "PB",
+        "tab": "9d17ac335cd6d8bb",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "db66e84f3552f96e",
+        "type": "serial-port",
+        "name": "COM4",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "5293b7e195606dc2",
+        "type": "ui_group",
+        "name": "Start",
+        "tab": "9d17ac335cd6d8bb",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3fa0da8da1341217",
+        "type": "ui_group",
+        "name": "Timer",
+        "tab": "9d17ac335cd6d8bb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9d17ac335cd6d8bb",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
